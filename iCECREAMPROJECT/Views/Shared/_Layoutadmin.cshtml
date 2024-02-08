@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@Page.Title</title>
+        @RenderSection("head", required: false)
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="row">
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" >
+
+                <div class="list-group">
+
+                    @Html.ActionLink("DashBoard", "Dashboard", "Admin", new { @class = "list-group-item" });
+                    @Html.ActionLink("View Feedback", "Feedback", "Admin", new { @class = "list-group-item" });
+                    @Html.ActionLink("Manage User", "User", "Admin", new { @class = "list-group-item" });
+
+                </div>
+            </div>
+
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                @RenderBody()
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+    </body>
+</html>
